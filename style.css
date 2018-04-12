@@ -71,7 +71,8 @@ nav .topnav-right a:hover::before{
 }
 .tagline h1 {
   font-size: 4rem;
-  margin: 0
+  margin: 0;
+  font-family: 'Merriweather', serif;
 }
 .tagline p {
   font-size: 2rem;
