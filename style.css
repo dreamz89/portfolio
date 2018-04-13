@@ -19,16 +19,16 @@ html, body {
 }
 
 /* Navigation bar */
-nav > a {
+/* nav > a {
   float: left;
   text-decoration: none;
   font-size: 1.3rem;
   padding: 2% 2% 2% 0;
-}
+} */
 nav .topnav-right {
   float: right;
   padding: 2% 2%;
-  width: 50%
+  width: 45%
 }
 nav .topnav-right a {
   text-decoration: none;
@@ -78,12 +78,23 @@ nav .topnav-right a:hover::before{
   font-size: 2rem;
   line-height: 1.6
 }
+#changing {
+  font-style: italic;
+  font-weight: 600;
+}
+#cta img {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  width: 40%
+}
 
 /* about section */
 #about {
   font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
+  height: auto
 }
 .leftColumn {
   float: left;
@@ -102,6 +113,23 @@ nav .topnav-right a:hover::before{
 /* skills section */
 #skills {
   clear:both;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#skills div {
+  width: 40%;
+}
+#skills div h2 {
+  width: 100%
+}
+#skills div img {
+  display: inline-block;
+  margin: 0 5% 3% 0;
+  height: 70px;
+}
+.rect {
+  width: 100px
 }
 
 /* portfolio section */
@@ -114,12 +142,11 @@ nav .topnav-right a:hover::before{
   border-bottom: 2px solid #eee;
 }
 .work {
-  padding: 3% 0;
+  padding: 4% 0;
   display: flex;
   flex-direction: row;
 }
 .half {
-  display: inline-block;
   width: 49%;
   margin-right: 2%;
 }
@@ -191,12 +218,30 @@ nav .topnav-right a:hover::before{
 
 /* media queries  */
 @media screen and (max-width: 600px) {
-  #about {
-    height: auto;
+  .tagline h1 {
+    font-size: 2.5rem;
+  }
+  .tagline p {
+    font-size: 1.2rem;
+  }
+  #cta img {
+    position: absolute;
+    right: 10%;
+    top: 60%;
+    width: 60%
   }
   .leftColumn, .rightColumn {
     float: none;
     width: 100%;
+  }
+  #skills {
+    flex-direction: column
+  }
+  #skills div {
+    width: 100%
+  }
+  #skills div img {
+    height: 50px;
   }
   .work {
     flex-direction: column;
@@ -206,10 +251,14 @@ nav .topnav-right a:hover::before{
     flex-direction: column-reverse;
   }
   .half {
-    display: block;
     width: 100%;
   }
-  .left, .right {
-    width: 100%
+}
+@media screen and (max-width: 1100px) {
+  #cta img {
+    position: absolute;
+    right: 10%;
+    top: 60%;
+    width: 60%
   }
 }
