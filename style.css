@@ -28,7 +28,7 @@ nav > a {
 nav .topnav-right {
   float: right;
   padding: 2% 2%;
-  width: 40%
+  width: 50%
 }
 nav .topnav-right a {
   text-decoration: none;
@@ -81,7 +81,6 @@ nav .topnav-right a:hover::before{
 
 /* about section */
 #about {
-  height: 80vh;
   font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
@@ -116,21 +115,20 @@ nav .topnav-right a:hover::before{
 }
 .work {
   padding: 3% 0;
-  height: 50vh;
+  display: flex;
+  flex-direction: row;
 }
 .half {
   display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  width: 47%;
-  padding-right: 2%;
+  width: 49%;
+  margin-right: 2%;
 }
 .left {
-  height: 100%;
+  width: 100%;
   float:right
 }
 .right {
-  height: 100%;
+  width: 100%;
   float:left
 }
 .button {
@@ -182,11 +180,36 @@ nav .topnav-right a:hover::before{
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
-  margin: 0 4%;
+  margin: 0 5%;
   padding: 8px;
 }
 #download:hover{
   background-color: #008080;
   color: white;
   cursor: pointer;
+}
+
+/* media queries  */
+@media screen and (max-width: 600px) {
+  #about {
+    height: auto;
+  }
+  .leftColumn, .rightColumn {
+    float: none;
+    width: 100%;
+  }
+  .work {
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .half {
+    display: block;
+    width: 100%;
+  }
+  .left, .right {
+    width: 100%
+  }
 }
