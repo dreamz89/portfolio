@@ -1,5 +1,6 @@
 /* Remove bounce on scroll */
-html, body {
+html,
+body {
   height: 100%;
   overflow: hidden;
 }
@@ -19,12 +20,6 @@ html, body {
 }
 
 /* Navigation bar */
-/* nav > a {
-  float: left;
-  text-decoration: none;
-  font-size: 1.3rem;
-  padding: 2% 2% 2% 0;
-} */
 nav .topnav-right {
   float: right;
   padding: 2% 2%;
@@ -174,7 +169,8 @@ nav .topnav-right a:hover::before{
   color: white;
   cursor: pointer;
 }
-.button img, .button p {
+.button img,
+.button p {
   display: inline-block;
   vertical-align:middle;
   height: 20px;
@@ -230,7 +226,8 @@ nav .topnav-right a:hover::before{
     top: 60%;
     width: 60%
   }
-  .leftColumn, .rightColumn {
+  .leftColumn,
+  .rightColumn {
     float: none;
     width: 100%;
   }
