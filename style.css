@@ -137,7 +137,7 @@ nav .topnav-right a:hover::before{
   border-bottom: 2px solid #eee;
 }
 .work {
-  padding: 4% 0;
+  padding-bottom: 7%;
   display: flex;
   flex-direction: row;
 }
@@ -184,7 +184,7 @@ nav .topnav-right a:hover::before{
   font-family: 'Fira Sans', sans-serif;
 }
 #contact div:first-of-type {
-  width: 50vh;
+  width: 60vh;
   position: relative;
 }
 #contact img {
@@ -237,18 +237,31 @@ nav .topnav-right a:hover::before{
   #skills div {
     width: 100%
   }
+  #skills div h2 {
+    font-size: 1.2rem
+  }
   #skills div img {
-    height: 50px;
+    height: 45px;
+  }
+  #about, #portfolio, #download, #contact {
+    font-size: 1rem
   }
   .work {
     flex-direction: column;
-    padding: 5% 0;
+    padding-bottom: 10%;
   }
   .reverse {
     flex-direction: column-reverse;
   }
   .half {
     width: 100%;
+  }
+  #contact img {
+    height: 35px;
+    margin: 0;
+  }
+  #download {
+    padding: 5px;
   }
 }
 @media screen and (max-width: 1100px) {
