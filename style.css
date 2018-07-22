@@ -58,6 +58,7 @@ nav .topnav-right a:hover::before{
   height: 100vh;
   position: relative;
   font-family: 'Fira Sans', sans-serif;
+  background-image: url('images/trianglify.svg');
 }
 .tagline {
   position:absolute;
@@ -76,12 +77,6 @@ nav .topnav-right a:hover::before{
 #changing {
   font-style: italic;
   font-weight: 600;
-}
-#cta img {
-  position: absolute;
-  right: 10%;
-  top: 40%;
-  width: 40%
 }
 
 /* about section */
@@ -111,6 +106,7 @@ nav .topnav-right a:hover::before{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 #skills div {
   width: 40%;
