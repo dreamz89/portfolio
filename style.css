@@ -59,6 +59,8 @@ nav .topnav-right a:hover::before{
   position: relative;
   font-family: 'Fira Sans', sans-serif;
   background-image: url('images/trianglify.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .tagline {
   position:absolute;
@@ -266,5 +268,10 @@ nav .topnav-right a:hover::before{
     right: 10%;
     top: 60%;
     width: 60%
+  }
+}
+@media screen and (max-width: 330px) {
+  .button {
+    max-width: 90px;
   }
 }
