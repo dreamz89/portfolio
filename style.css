@@ -1,4 +1,4 @@
-/* Remove bounce on scroll */
+/* remove bounce on scroll */
 html {
   overflow: hidden;
   height: 100%;
@@ -14,6 +14,18 @@ body {
 .bg {
   background-color: #E7F3F3;
 }
+h1 {
+  font-size: 30px;
+  line-height: 1.35em;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.35em;
+}
+p {
+  font-size: 20px;
+  line-height: 1.35em;
+}
 
 /* Navigation bar */
 nav {
@@ -23,7 +35,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 500;
   color: black;
   margin: 0 2%;
@@ -65,13 +77,12 @@ nav a:hover::before{
   transform: translateY(-50%);
 }
 .tagline h1 {
-  font-size: 4rem;
   margin: 0;
   font-family: 'Merriweather', serif;
+  font-size: 60px;
 }
 .tagline p {
-  font-size: 2rem;
-  line-height: 1.6
+  font-size: 32px;
 }
 #changing {
   font-style: italic;
@@ -80,7 +91,6 @@ nav a:hover::before{
 
 /* about section */
 #about {
-  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   height: auto
@@ -113,7 +123,7 @@ nav a:hover::before{
   width: 60%;
 }
 #skills div h2 {
-  width: 100%
+  width: 100%;
 }
 #skills div img {
   display: inline-block;
@@ -126,7 +136,6 @@ nav a:hover::before{
 
 /* portfolio section */
 #portfolio {
-  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
 }
@@ -138,28 +147,25 @@ nav a:hover::before{
   display: flex;
   flex-direction: row;
 }
+.reverse {
+  flex-direction: row-reverse;
+}
 .half {
   width: 49%;
   margin-right: 2%;
 }
-.left {
+.half > img {
   width: 100%;
-  float:right
-}
-.right {
-  width: 100%;
-  float:left
 }
 .button {
   border: 3px solid #008080;
   color: #008080;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: normal;
   text-decoration: none;
   padding: 8px;
   margin-right: 15px;
   display:inline-block;
-  width: 90px
 }
 .button:hover{
   background-color: #008080;
@@ -172,11 +178,11 @@ nav a:hover::before{
   vertical-align:middle;
   height: 20px;
   margin: 0 5px;
+  line-height: 1em;
 }
 
 /* professional section */
 #professional {
-  font-size: 1.2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
 }
@@ -222,7 +228,7 @@ nav a:hover::before{
   border: 3px solid #008080;
   background-color: #E7F3F3;
   color: #008080;
-  font-size: 1rem;
+  font-size: 1em;
   text-align: center;
   text-decoration: none;
   margin: 0 5%;
@@ -236,14 +242,26 @@ nav a:hover::before{
 
 /* media queries  */
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    line-height: 1.35em;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.35em;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.35em;
+  }
   nav {
     justify-content: space-evenly;
   }
   .tagline h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
   .tagline p {
-    font-size: 1.2rem;
+    font-size: 24px;
   }
   .leftColumn,
   .rightColumn {
@@ -257,9 +275,6 @@ nav a:hover::before{
   #skills div:nth-child(even) {
     width: 100%;
   }
-  #skills div h2 {
-    font-size: 1.2rem
-  }
   #skills div img {
     height: 45px;
   }
@@ -267,15 +282,9 @@ nav a:hover::before{
     width: 100%;
     padding: 0;
   }
-  #about, #portfolio, #download, #contact {
-    font-size: 1rem
-  }
   .work {
     flex-direction: column;
     padding-bottom: 10%;
-  }
-  .reverse {
-    flex-direction: column-reverse;
   }
   .half {
     width: 100%;
