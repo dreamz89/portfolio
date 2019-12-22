@@ -205,16 +205,13 @@ nav a:hover::before{
   vertical-align: top;
   margin: 0 10px;
 }
+.project div:hover img {
+  opacity: 0.8;
+}
 .project a {
   text-decoration: none;
   color: black;
   font-size: 17px;
-}
-.project a div {
-  display: inline-block;
-  width: 30%;
-  vertical-align: text-top;
-  padding: 0 1%;
 }
 .project a img {
   width: 100%;
