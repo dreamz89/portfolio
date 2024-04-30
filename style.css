@@ -14,22 +14,40 @@ body {
   padding: 20px;
 }
 .bg {
-  background-color: #E7F3F3;
+  background-color: #e7f3f3;
 }
+
 h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 30px;
-  line-height: 1em;
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  line-height: 1.35em;
+
+  @media screen and (min-width: 640px) {
+    font-size: 30px;
+    line-height: 1em;
+  }
 }
+
 h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 22px;
-  line-height: 1em;
-}
-p {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 20px;
-  line-height: 1.3em;
+  line-height: 1.35em;
+
+  @media screen and (min-width: 640px) {
+    font-size: 22px;
+    line-height: 1em;
+  }
+}
+
+p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.35em;
+
+  @media screen and (min-width: 640px) {
+    font-size: 18px;
+    line-height: 1.3em;
+  }
 }
 
 #cta > div {
@@ -46,7 +64,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: black;
@@ -67,7 +85,7 @@ nav a:before {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-nav a:hover::before{
+nav a:hover::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -77,7 +95,7 @@ nav a:hover::before{
 #cta {
   height: 100vh;
   position: relative;
-  background-image: url('images/trianglify.svg');
+  background-image: url("images/trianglify.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -89,12 +107,20 @@ nav a:hover::before{
 }
 .tagline h1 {
   margin: 0;
-  font-size: 60px;
+  font-size: 40px;
+
+  @media screen and (min-width: 640px) {
+    font-size: 60px;
+  }
 }
 .tagline p {
-  font-size: 32px;
+  font-size: 24px;
+
+  @media screen and (min-width: 640px) {
+    font-size: 32px;
+  }
 }
-#changing {
+.tagline .changing {
   font-style: italic;
   font-weight: 600;
 }
@@ -102,19 +128,22 @@ nav a:hover::before{
 /* about section */
 #about .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  column-gap: 32px;
+
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+  }
 }
+
 #about .content > div {
   flex-basis: 50%;
-  font-weight: 300;
   line-height: 1.6;
 }
-.leftColumn {
-  margin-right: 20px;
-}
-.rightColumn img {
+
+#about .content img {
   display: block;
-  width: 100%
+  width: 100%;
 }
 
 /* skills section */
@@ -139,8 +168,8 @@ nav a:hover::before{
   height: 50px;
 
   @media screen and (min-width: 640px) {
-  height: 70px;
-}
+    height: 70px;
+  }
 }
 
 #skills .logos .rect {
@@ -152,22 +181,27 @@ nav a:hover::before{
   border-bottom: 2px solid #eee;
 }
 .work {
-  font-weight: 300;
-  margin-bottom: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  column-gap: 32px;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+  }
 }
-.reverse {
-  flex-direction: row-reverse;
+.work.reverse {
+  @media screen and (min-width: 640px) {
+    flex-direction: row-reverse;
+  }
 }
-.half {
-  width: 49%;
-  margin: 0 20px 20px 0;
+.work > div {
+  flex-basis: 100%;
 }
-.half > img {
-  display: block;
+.work > div > img {
   width: 100%;
 }
+
 .button {
   border: 2px solid #008080;
   color: #008080;
@@ -175,7 +209,7 @@ nav a:hover::before{
   text-decoration: none;
   padding: 8px;
   margin: 0 15px 15px 0;
-  display:inline-block;
+  display: inline-block;
 }
 .button:hover {
   background-color: #008080;
@@ -185,7 +219,7 @@ nav a:hover::before{
 .button img,
 .button p {
   display: inline-block;
-  vertical-align:middle;
+  vertical-align: middle;
   height: 20px;
   line-height: 20px;
   margin: 0 5px;
@@ -199,108 +233,37 @@ nav a:hover::before{
 #professional p {
   font-weight: 300;
 }
-.project {
+.projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 16px;
 }
-.project div {
-  max-width: 380px;
-  width: 100%;
-  vertical-align: top;
-  margin: 0 10px;
-}
-.project div:hover img {
-  opacity: 0.8;
-}
-.project a {
-  text-decoration: none;
+.projects a {
   color: black;
   font-size: 17px;
+  max-width: 380px;
+  text-decoration: none;
 }
-.project a img {
+.projects a img {
   width: 100%;
   display: block;
+}
+.projects a:hover img {
+  opacity: 0.8;
 }
 
 /* contact footer section */
 #contact img {
-  height: 40px;
-  margin-right: 20px;
-  opacity: .5;
+  height: 35px;
+  margin: 0;
+  opacity: 0.5;
+
+  @media screen and (min-width: 640px) {
+    height: 40px;
+    margin-right: 20px;
+  }
 }
 #contact img:hover {
   opacity: 1;
-}
-/* #download {
-  position: absolute;
-  border: 3px solid #008080;
-  background-color: #E7F3F3;
-  color: #008080;
-  font-size: 1em;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 5%;
-  padding: 8px;
-}
-#download:hover{
-  background-color: #008080;
-  color: white;
-  cursor: pointer;
-} */
-
-/* media queries  */
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 24px;
-    line-height: 1.35em;
-  }
-  h2 {
-    font-size: 20px;
-    line-height: 1.35em;
-  }
-  p {
-    font-size: 16px;
-    line-height: 1.35em;
-  }
-  .tagline h1 {
-    font-size: 40px;
-  }
-  .tagline p {
-    font-size: 24px;
-  }
-  #about .content {
-    flex-direction: column;
-  }
-  .leftColumn,
-  .rightColumn {
-    width: 100%;
-  }
-  #skills {
-    flex-direction: column
-  }
-  #skills > div > div:nth-child(odd),
-  #skills > div > div:nth-child(even) {
-    width: 100%;
-  }
-  #skills > div > div img {
-    height: 50px;
-  }
-  .project a div {
-    width: 100%;
-    padding: 0;
-  }
-  .work {
-    flex-direction: column;
-  }
-  .half {
-    width: 100%;
-  }
-  #contact img {
-    height: 35px;
-    margin: 0;
-  }
-  #download {
-    padding: 5px;
-  }
 }
