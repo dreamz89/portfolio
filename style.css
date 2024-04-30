@@ -119,27 +119,32 @@ nav a:hover::before{
 
 /* skills section */
 #skills > div {
-  clear:both;
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#skills .logos {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: 16px;
 }
-#skills > div > div:nth-child(odd) {
-  width: 40%;
-}
-#skills > div > div:nth-child(even) {
-  width: 60%;
-}
-#skills > div > div h2 {
-  width: 100%;
-}
-#skills > div > div img {
-  display: inline-block;
-  margin: 0 5% 3% 0;
+
+#skills .logos img {
+  height: 50px;
+
+  @media screen and (min-width: 640px) {
   height: 70px;
 }
-.rect {
-  width: 100px
+}
+
+#skills .logos .rect {
+  width: 150px;
 }
 
 /* portfolio section */
