@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* remove bounce on scroll */
 html {
   overflow: hidden;
@@ -11,7 +17,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 .bg {
   background-color: #e7f3f3;
@@ -19,23 +25,32 @@ body {
 
 h1 {
   font-family: "Merriweather", serif;
-  font-size: 24px;
-  line-height: 1.35em;
+  font-size: 48px;
+  line-height: 1em;
 
   @media screen and (min-width: 640px) {
-    font-size: 30px;
-    line-height: 1em;
+    font-size: 60px;
   }
 }
 
 h2 {
   font-family: "Merriweather", serif;
-  font-size: 20px;
-  line-height: 1.35em;
+  font-size: 24px;
+  line-height: 1.1em;
+  margin-bottom: 24px;
 
   @media screen and (min-width: 640px) {
-    font-size: 22px;
-    line-height: 1em;
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  line-height: 1.3em;
+
+  @media screen and (min-width: 640px) {
+    font-size: 24px;
   }
 }
 
@@ -43,22 +58,15 @@ p {
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   line-height: 1.35em;
-
-  @media screen and (min-width: 640px) {
-    font-size: 18px;
-    line-height: 1.3em;
-  }
 }
 
 #cta > div {
   height: 100%;
   position: relative;
-  box-sizing: border-box;
 }
 
 /* Navigation bar */
 nav {
-  margin: 20px;
   position: absolute;
   right: 0;
 }
@@ -106,21 +114,16 @@ nav a:hover::before {
   justify-content: center;
 }
 .tagline h1 {
-  margin: 0;
-  font-size: 40px;
-
-  @media screen and (min-width: 640px) {
-    font-size: 60px;
-  }
+  margin-bottom: 16px;
 }
 .tagline p {
   font-size: 24px;
 
   @media screen and (min-width: 640px) {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
-.tagline .changing {
+.tagline #changing {
   font-style: italic;
   font-weight: 600;
 }
@@ -141,12 +144,19 @@ nav a:hover::before {
   line-height: 1.6;
 }
 
+#about .content p {
+  margin-bottom: 16px;
+}
+
 #about .content img {
   display: block;
   width: 100%;
 }
 
 /* skills section */
+#skills h3 {
+  margin-bottom: 16px;
+}
 #skills > div {
   clear: both;
   display: grid;
@@ -177,14 +187,18 @@ nav a:hover::before {
 }
 
 /* portfolio section */
-#portfolio h1 {
+#portfolio h2 {
   border-bottom: 2px solid #eee;
+}
+#portfolio h3 {
+  margin-bottom: 16px;
 }
 .work {
   display: flex;
   flex-direction: column;
   column-gap: 32px;
-  margin-bottom: 50px;
+  row-gap: 16px;
+  margin-bottom: 60px;
 
   @media screen and (min-width: 640px) {
     flex-direction: row;
@@ -201,14 +215,20 @@ nav a:hover::before {
 .work > div > img {
   width: 100%;
 }
-
+.work > div > p {
+  margin-bottom: 12px;
+}
+.buttons {
+  display: flex;
+  column-gap: 16px;
+  margin-top: 24px;
+}
 .button {
   border: 2px solid #008080;
   color: #008080;
   font-size: 1em;
   text-decoration: none;
   padding: 8px;
-  margin: 0 15px 15px 0;
   display: inline-block;
 }
 .button:hover {
@@ -227,42 +247,57 @@ nav a:hover::before {
 }
 
 /* professional section */
-#professional h1 {
+#professional h2 {
   border-bottom: 2px solid #eee;
 }
-#professional p {
-  font-weight: 300;
+#professional .subtitle {
+  display: flex;
+}
+#professional .subtitle__vertical {
+  border-left: 4px solid #008080;
+  margin-right: 8px;
 }
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 16px;
+  margin: 32px 0;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1048px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .projects a {
   color: black;
   font-size: 17px;
-  max-width: 380px;
   text-decoration: none;
 }
 .projects a img {
   width: 100%;
   display: block;
+  margin-bottom: 8px;
 }
 .projects a:hover img {
   opacity: 0.8;
 }
 
 /* contact footer section */
+#contact h3 {
+  margin-bottom: 16px;
+}
+#contact .social {
+  display: flex;
+  margin-top: 16px;
+  gap: 16px;
+}
 #contact img {
-  height: 35px;
-  margin: 0;
-  opacity: 0.5;
-
-  @media screen and (min-width: 640px) {
-    height: 40px;
-    margin-right: 20px;
-  }
+  display: block;
+  height: 30px;
+  opacity: 0.8;
 }
 #contact img:hover {
   opacity: 1;
